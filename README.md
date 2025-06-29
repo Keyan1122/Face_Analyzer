@@ -24,17 +24,17 @@ pip install -r requirements.txt
 
 ## 🧪 CLI Usage
 
-# Analyze Image
+### 🖼️ Analyze Image
 ```bash
 python main.py --image path/to/image.jpg
 ```
 
-# Analyze Video
+### 🎞️ Analyze Video
 ```bash
 python main.py --video path/to/video.mp4
 ```
 
-# Analyze Webcam
+### 📷 Analyze Webcam
 ```bash
 python main.py --webcam
 ```
