@@ -26,17 +26,17 @@ pip install -r requirements.txt
 
 # Analyze Image
 ```bash
-python run.py --mode image --path path/to/image.jpg
+python main.py --image path/to/image.jpg
 ```
 
 # Analyze Video
 ```bash
-python run.py --mode video --path path/to/video.mp4
+python main.py --video path/to/video.mp4
 ```
 
 # Analyze Webcam
 ```bash
-python run.py --mode webcam
+python main.py --webcam
 ```
 
 ## 🖥 GUI Usage
@@ -62,10 +62,10 @@ Press Q to close the webcam or video window during analysis.
 
 ---
 
-## 📸 Preview
+<!-- ## 📸 Preview
 You can add screenshots of the GUI here.
 
----
+--- -->
 
 ## 🧑‍💻 Author
 Created by KARTHIKEYAN ARIVAZHAGAN – feel free to connect!

@@ -2,7 +2,7 @@ import cv2
 import argparse
 import csv
 import time
-from utils import analyse_frame, draw_results
+from src.utils import analyse_frame, draw_results
 
 # Create a VideoEditor to save the output video
 def get_video_writer(frame, path='output_video.avi', fps=50.0):
@@ -14,7 +14,7 @@ def analyse_image(image_path):
     image = cv2.imread(image_path) # Load the image
     result = analyse_frame(image) # Analyse the image
 
-    with open('image_result.csv', 'w', newline='') as file:
+    with open('results/image_result.csv', 'w', newline='') as file:
         writer = csv.DictWriter(file, fieldnames=['frame', 'face_id', 'age', 'gender', 'emotion'])
         writer.writeheader()
         output = draw_results(image, result, frame_id=1, csv_writer=writer) # Draw results on the image
@@ -33,7 +33,7 @@ def analyse_video(video_path):
     ret, frame = video.read()
     writer = get_video_writer(frame)
 
-    with open('video_result.csv', 'w', newline='') as file:
+    with open('results/video_result.csv', 'w', newline='') as file:
         writer_csv = csv.DictWriter(file, fieldnames=['frame', 'face_id', 'age', 'gender', 'emotion'])
         writer_csv.writeheader()
 

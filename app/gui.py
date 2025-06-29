@@ -1,6 +1,13 @@
 import tkinter as tk
 from tkinter import filedialog
-from run import analyse_image, analyse_video, analyse_webcam
+
+import sys
+import os
+
+# Add the parent directory (Face_Analyzer/) to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from main import analyse_image, analyse_video, analyse_webcam
 
 # Create main tkinter window
 root = tk.Tk()
